@@ -1,0 +1,220 @@
+.logo {
+    @include Bandsite-Logo;
+
+    h2 {
+        font-weight: 400;
+    }
+
+    color: $White;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.footer {
+    background: $BandSite-Black;
+    display: flex;
+    flex-direction: column;
+    color: $White;
+    padding: 16px;
+
+    &__head {
+        &-title {
+            @include Mobile-Sub_Header;
+            margin-top: 24px;
+            margin-bottom: 20px;
+
+            &-logo {
+                visibility: hidden;
+            }
+        }
+
+        &-icons {
+            display: flex;
+            gap: 40px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 40px;
+
+        &-element {
+            h3 {
+                @include Mobile-Body-Footer_Copy;
+                font-weight: 700;
+                margin-bottom: 16px;
+            }
+
+            p {
+                @include Mobile-Body-Footer_Copy;
+            }
+
+            p.url {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    &__foot {
+        p.copyright {
+            @include Mobile-Body-Footer_Copy;
+        }
+    }
+}
+
+// Tablet styles (768px - 1279px)
+@media screen and (min-width: 768px) {
+    .footer {
+        background: $BandSite-Black;
+        display: flex;
+        flex-direction: column;
+        color: $White;
+        padding: 40px;
+
+        &__head {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            &-title {
+                @include Desktop-Tablet-Sub_Header;
+                font-size: 23px;
+                margin-top: 24px;
+                margin-bottom: 20px;
+
+                &-logo {
+                    visibility: visible;
+                    margin-left: auto;
+                    font-size: 20px;
+                    margin-right: 40px;
+                }
+            }
+
+            &-icons {
+                display: flex;
+                gap: 40px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: row;
+            gap: 70px;
+            margin-bottom: 10px;
+            margin-top: 36px;
+
+            &-element {
+                
+
+                h3 {
+                    @include Desktop-Tablet-Body_Copy;
+                    font-weight: 700;
+                    margin-bottom: 36px;
+                }
+
+                p {
+                    @include Desktop-Tablet-Footer_Copy;
+                }
+
+                p.url {
+                    margin-top: 36px;
+                }
+            }
+        }
+
+        &__foot {
+            &-logo {
+                visibility: hidden;
+            }
+            p.copyright {
+                @include Desktop-Tablet-Body_Copy;
+            }
+        }
+    }
+
+}
+
+// Desktop styles (1280px and above)
+@media screen and (min-width: 1280px) {
+    .footer {
+        background: $BandSite-Black;
+        display: flex;
+        flex-direction: column;
+        color: $White;
+        padding: 40px;
+        padding-left: 150px;
+        padding-right: 150px;
+
+        &__head {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            &-title {
+                @include Desktop-Tablet-Sub_Header;
+                font-size: 20px;
+                margin-top: 24px;
+                margin-bottom: 20px;
+
+                &-logo {
+                    visibility: visible;
+                    margin-left: auto;
+                    font-size: 17px;
+                    margin-right: 40px;
+                }
+            }
+
+            &-icons {
+                display: flex;
+                gap: 40px;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: row;
+            gap: 70px;
+            margin-bottom: 0px;
+            margin-top: 36px;
+
+            &-element {
+                
+
+                h3 {
+                    @include Desktop-Tablet-Body_Copy;
+                    font-weight: 700;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    @include Desktop-Tablet-Footer_Copy;
+                }
+
+                p.url {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        &__foot {
+            &-logo {
+                visibility: hidden;
+            }
+            p.copyright {
+                @include Desktop-Tablet-Body_Copy;
+            }
+        }
+    }
+}

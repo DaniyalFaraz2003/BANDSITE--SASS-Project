@@ -1,0 +1,103 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: $BandSite-Black;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        @include Bandsite-Logo;
+
+        h2 {
+            font-weight: 400;
+        }
+
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+
+    &__options {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+
+        &-item {
+            text-align: center;
+            flex-basis: 50%;
+            color: $Mercury;
+            font-weight: 500;
+            font-size: 14px;
+            padding-bottom: 14px;
+            border-bottom: 3px solid transparent;
+
+            &:hover {
+                border-bottom-color: $White;
+            }
+        }
+
+        .active {
+            font-weight: 700;
+            border-bottom: 3px solid $White;
+        }
+    }
+}
+
+
+// Tablet styles (768px - 1279px)
+@media screen and (min-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        background: $BandSite-Black;
+
+        .logo {
+            @include Bandsite-Logo;
+
+            h2 {
+                font-weight: 400;
+            }
+            margin: 22px;
+        }
+
+        &__options {
+            display: flex;
+            width: fit-content;
+            gap: 30px;
+            align-items: center;
+            justify-content: flex-start;
+
+            &-item {
+                margin-top: 30px;
+                margin-left: 30px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                flex-basis: 50%;
+                color: $Mercury;
+                font-weight: 500;
+                font-size: 14px;
+                border-bottom: 4px solid transparent;
+
+                &:hover {
+                    border-bottom-color: $White;
+                }
+            }
+
+            .active {
+                font-weight: 700;
+                border-bottom: 3px solid $White;
+            }
+        }
+    }
+}
+
+// Desktop styles (1280px and above)
+@media screen and (min-width: 1280px) {
+    .nav {
+        padding-left: 70px;    
+    }
+}
